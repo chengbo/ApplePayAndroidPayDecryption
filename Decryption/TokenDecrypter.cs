@@ -54,6 +54,8 @@ namespace Net.BoCheng.Decryption
 
         protected abstract void VerifySignature(string encryptedMessage, string signature);
 
+        protected abstract IBufferedCipher GetCipher();
+
         private byte[] GenerateSharedSecret()
         {
             ECPrivateKeyParameters keyParams = CreatePrivateKeyParameters();
@@ -70,7 +72,7 @@ namespace Net.BoCheng.Decryption
             {
                 KeyParameter keyparam = ParameterUtilities.CreateKeyParameter("AES", EncryptionKeyBytes);
                 ParametersWithIV parameters = new ParametersWithIV(keyparam, symmetricIv);
-                IBufferedCipher cipher = CipherUtilities.GetCipher("AES/CTR/NoPadding");
+                IBufferedCipher cipher = GetCipher();
                 cipher.Init(false, parameters);
                 try
                 {

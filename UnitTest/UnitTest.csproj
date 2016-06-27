@@ -51,6 +51,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="AndroidPayDecrypterTest.cs" />
+    <Compile Include="ApplePayDecrypterTest.cs" />
     <Compile Include="DecrypterFactoryUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="AndroidPayTokenDecrypter.cs" />
     <Compile Include="ApplePayTokenDecrypter.cs" />
+    <Compile Include="Generators\ConcatenationKdfGenerator.cs" />
     <Compile Include="Generators\HkdfBytesGenerator.cs" />
     <Compile Include="Parameters\HkdfParameters.cs" />
     <Compile Include="PaymentParameters.cs" />
