@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.1\lib\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,10 +45,17 @@
   <ItemGroup>
     <Compile Include="AndroidPayTokenDecrypter.cs" />
     <Compile Include="ApplePayTokenDecrypter.cs" />
+    <Compile Include="Generators\HkdfBytesGenerator.cs" />
+    <Compile Include="Parameters\HkdfParameters.cs" />
+    <Compile Include="PaymentParameters.cs" />
     <Compile Include="TokenDecrypterFactory.cs" />
     <Compile Include="TokenDecrypter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
