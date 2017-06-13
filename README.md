@@ -24,3 +24,7 @@ Then you are able to use it like below
     {
         PrivateKey = "{Your-Private-Key-Is-Here}"
     };
+
+## License
+
+Licensed under the [MIT](LICENSE) License.
